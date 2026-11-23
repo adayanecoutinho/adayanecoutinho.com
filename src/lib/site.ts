@@ -3,7 +3,7 @@ export const siteConfig = {
   url: "https://adayanecoutinho.com",
   email: "hello@adayanecoutinho.com",
   github: "https://github.com/adayanecoutinho",
-  linkedin: "https://br.linkedin.com/in/adayane-coutinho-76b19631",
+  linkedin: "https://www.linkedin.com/in/naihara-lucas-b8a098424/",
   lastModified: "2026-11-23",
 } as const;
 

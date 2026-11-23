@@ -86,7 +86,7 @@ Public contact details, and only these:
 
 - Email: hello@adayanecoutinho.com
 - GitHub: https://github.com/adayanecoutinho
-- LinkedIn: https://br.linkedin.com/in/adayane-coutinho-76b19631
+- LinkedIn: https://www.linkedin.com/in/naihara-lucas-b8a098424/
 
 ## Still TODO
 
