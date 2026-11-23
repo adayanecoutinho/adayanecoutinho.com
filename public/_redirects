@@ -1,0 +1,2 @@
+# Static host redirect. `output: 'export'` cannot use middleware or next.config redirects.
+/ /en 301
