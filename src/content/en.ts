@@ -67,8 +67,15 @@ export const en = {
           "My AI assistants don't share a trusted memory, and their answers don't show where they came from.",
         solution:
           "A personal memory service exposed over MCP, starting with health records. Every answer cites its source, and anything an AI extracts stays pending until I confirm it. The public demo uses fictional data only.",
-        result: "In progress. The code will be public on GitHub.",
+        result:
+          "Phase 1 of 4. The read-only MCP server is public on GitHub, with 25 tests, CI with secret scanning and 10 architecture decision records.",
         stack: ["Python", "MCP", "SQLite FTS5", "Git"],
+        links: [
+          {
+            label: "GitHub",
+            href: "https://github.com/adayanecoutinho/personal-brain",
+          },
+        ],
       },
       openmonetis: {
         problem:

@@ -66,8 +66,15 @@ export const pt = {
           "Meus assistentes de IA não compartilham uma memória confiável, e as respostas não mostram de onde vieram.",
         solution:
           "Um serviço de memória pessoal exposto por MCP, começando pelo histórico de saúde. Cada resposta cita a fonte, e o que uma IA extrai fica pendente até eu confirmar. A demonstração pública usa só dados fictícios.",
-        result: "Em andamento. O código será público no GitHub.",
+        result:
+          "Fase 1 de 4. O servidor MCP só de leitura está público no GitHub, com 25 testes, CI com varredura de segredos e 10 registros de decisão de arquitetura (ADRs).",
         stack: ["Python", "MCP", "SQLite FTS5", "Git"],
+        links: [
+          {
+            label: "GitHub",
+            href: "https://github.com/adayanecoutinho/personal-brain",
+          },
+        ],
       },
       openmonetis: {
         problem:
