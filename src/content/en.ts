@@ -1,7 +1,7 @@
 import type { Dictionary } from "@/content/types";
 
 /**
- * English copy. Visible placeholders start with "TODO:".
+ * English copy.
  * Do not link private apps, and do not mention any domain other than
  * adayanecoutinho.com.
  */
@@ -43,45 +43,64 @@ export const en = {
     role: "AI Engineer",
   },
   home: {
-    title: "AI Engineer",
+    title: "AI Engineer | Forward Deployed Engineer | Senior Software Engineer",
     positioning:
-      "I build practical LLM applications: MCP servers, RAG, agents, and data pipelines.",
-    availability:
-      "Open to AI engineering and Forward Deployed Engineer roles, international first.",
-    projectsCta: "View projects",
-    contactCta: "Get in touch",
+      "I build practical LLM systems that plug into real workflows, and I can sit with a customer to make them work in production.",
     workHeading: "Selected work",
-    workNote: "TODO: Replace these with short case studies.",
   },
   about: {
     heading: "About",
-    lede: "A short introduction will live here.",
-    body: "I am an AI engineer based in Brazil. I work on applied LLM systems: the pieces that connect models to tools, data, and real workflows.",
-    todo: "TODO: Replace this placeholder with a concise bio, how you work with teams, and the roles you want. Keep every claim accurate and public.",
+    body: "Senior Software Engineer with 15 years in backend and cloud: Java, Spring Boot, Kafka and AWS, most recently on high-volume credit systems in the financial sector. Now focused on applied AI: MCP servers, agents and LLM workflows that run inside real systems, with guardrails and production ownership. Open to Forward Deployed Engineer and applied-AI roles with international teams, remote.",
   },
   projects: {
     heading: "Projects",
-    lede: "Selected work. The write-ups below are placeholders.",
-    todo: "TODO: Turn each card into a short case study: problem, your role, and what shipped. Do not link private apps.",
+    lede: "Selected work.",
+    labels: {
+      problem: "Problem",
+      solution: "Solution",
+      result: "Result",
+      stack: "Stack",
+    },
     items: {
       "personal-brain-mcp": {
-        summary: "A personal knowledge MCP server.",
-        todo: "TODO: Describe what it connects, who it is for, and what is safe to show publicly.",
+        problem:
+          "My AI assistants don't share a trusted memory, and their answers don't show where they came from.",
+        solution:
+          "A personal memory service exposed over MCP, starting with health records. Every answer cites its source, and anything an AI extracts stays pending until I confirm it. The public demo uses fictional data only.",
+        result: "In progress. The code will be public on GitHub.",
+        stack: ["Python", "MCP", "SQLite FTS5", "Git"],
       },
       openmonetis: {
-        summary: "Open Finance product work.",
-        todo: "TODO: Describe the problem, your role, and the outcome. Do not link a private app.",
+        problem:
+          "Tracking my finances by hand, typing or photographing card invoices, was slow and error-prone.",
+        solution:
+          "I extended OpenMonetis, an open-source self-hosted finance app by Felipe Coutinho, with an installment import API, a read-only snapshot API and Open Finance card sync via Pluggy. The sync runs as a dry-run by default and never deletes manual entries. Claude agents read invoices and act as a financial advisor, always asking before they write.",
+        result:
+          "In production on my own server since June 2026: 1,246 entries, 462 of them synced from Open Finance across 60 sync runs.",
+        stack: [
+          "TypeScript",
+          "Next.js",
+          "PostgreSQL",
+          "Drizzle",
+          "Pluggy",
+          "Claude",
+          "Docker",
+        ],
       },
       "treino-evolucao": {
-        summary: "A training product.",
-        todo: "TODO: Describe the problem, your role, and the outcome.",
+        problem:
+          "My training data lived in three places (Hevy, Strava and my notes), with no consistent weekly feedback.",
+        solution:
+          "An idempotent Python ETL loads everything into PostgreSQL, with monitoring and an independent verification step. A Claude-based coach reads the weekly reports under explicit guardrails: no diagnosis, and every rule cites its source.",
+        result:
+          "152 workouts, 3,031 sets and 101 cardio sessions migrated with matching counts, running on my server with health-check alerts.",
+        stack: ["Python", "PostgreSQL", "Docker", "Claude"],
       },
     },
   },
   contact: {
     heading: "Contact",
     lede: "Email is the best way to reach me.",
-    todo: "TODO: Add timezone and what a useful first message includes, if you want that here. This static site has no contact form.",
     emailLabel: "Email",
     githubLabel: "GitHub",
     linkedinLabel: "LinkedIn",
