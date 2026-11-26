@@ -1,5 +1,15 @@
 import type { ProjectSlug } from "@/lib/site";
 
+export type ProjectLinks = { label: string; href: string }[];
+
+export type ProjectCopy = {
+  problem: string;
+  solution: string;
+  result: string;
+  stack: string[];
+  links?: ProjectLinks;
+};
+
 export type Dictionary = {
   meta: {
     title: string;
@@ -33,28 +43,26 @@ export type Dictionary = {
   home: {
     title: string;
     positioning: string;
-    availability: string;
-    projectsCta: string;
-    contactCta: string;
     workHeading: string;
-    workNote: string;
   };
   about: {
     heading: string;
-    lede: string;
     body: string;
-    todo: string;
   };
   projects: {
     heading: string;
     lede: string;
-    todo: string;
-    items: Record<ProjectSlug, { summary: string; todo: string }>;
+    labels: {
+      problem: string;
+      solution: string;
+      result: string;
+      stack: string;
+    };
+    items: Record<ProjectSlug, ProjectCopy>;
   };
   contact: {
     heading: string;
     lede: string;
-    todo: string;
     emailLabel: string;
     githubLabel: string;
     linkedinLabel: string;

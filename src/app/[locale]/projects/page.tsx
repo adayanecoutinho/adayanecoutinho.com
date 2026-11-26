@@ -1,11 +1,4 @@
-import { TodoNote } from "@/components/todo-note";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { ProjectCard } from "@/components/project-card";
 import { getDictionary } from "@/content";
 import { getLocale } from "@/lib/i18n";
 import { createPageMetadata } from "@/lib/metadata";
@@ -44,28 +37,18 @@ export default async function ProjectsPage({
           {dict.projects.lede}
         </p>
       </header>
-      <TodoNote>{dict.projects.todo}</TodoNote>
       <ul className="flex flex-col gap-4">
-        {projects.map((project) => {
-          const copy = dict.projects.items[project.slug];
-          return (
-            <li key={project.slug} id={project.slug} className="scroll-mt-32">
-              <Card>
-                <CardHeader>
-                  <CardTitle>
-                    <h2 className="text-base leading-snug font-medium">
-                      {project.name}
-                    </h2>
-                  </CardTitle>
-                  <CardDescription>{copy.summary}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <TodoNote>{copy.todo}</TodoNote>
-                </CardContent>
-              </Card>
-            </li>
-          );
-        })}
+        {projects.map((project) => (
+          <li key={project.slug} className="scroll-mt-32">
+            <ProjectCard
+              id={project.slug}
+              name={project.name}
+              copy={dict.projects.items[project.slug]}
+              labels={dict.projects.labels}
+              newTabLabel={dict.newTab}
+            />
+          </li>
+        ))}
       </ul>
     </div>
   );

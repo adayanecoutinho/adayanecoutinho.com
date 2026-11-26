@@ -1,9 +1,8 @@
-import Link from "next/link";
-
-import { TodoNote } from "@/components/todo-note";
+import { ExternalLink } from "@/components/external-link";
+import { ProjectCard } from "@/components/project-card";
 import { buttonVariants } from "@/components/ui/button";
 import { getDictionary } from "@/content";
-import { getLocale, localePath } from "@/lib/i18n";
+import { getLocale } from "@/lib/i18n";
 import { createPageMetadata } from "@/lib/metadata";
 import { projects, siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -45,26 +44,27 @@ export default async function HomePage({
           <p className="max-w-2xl text-lg text-pretty sm:text-xl">
             {dict.home.positioning}
           </p>
-          <p className="max-w-2xl text-pretty text-muted-foreground">
-            {dict.home.availability}
-          </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Link
-            href={localePath(locale, "/projects")}
+          <ExternalLink
+            href={siteConfig.linkedin}
+            newTabLabel={dict.newTab}
+            rel="me noopener noreferrer"
             className={cn(buttonVariants({ size: "lg" }), "min-h-11 px-4")}
           >
-            {dict.home.projectsCta}
-          </Link>
-          <Link
-            href={localePath(locale, "/contact")}
+            {dict.contact.linkedinLabel}
+          </ExternalLink>
+          <ExternalLink
+            href={siteConfig.github}
+            newTabLabel={dict.newTab}
+            rel="me noopener noreferrer"
             className={cn(
               buttonVariants({ variant: "outline", size: "lg" }),
               "min-h-11 px-4",
             )}
           >
-            {dict.home.contactCta}
-          </Link>
+            {dict.contact.githubLabel}
+          </ExternalLink>
         </div>
       </section>
 
@@ -72,16 +72,16 @@ export default async function HomePage({
         <h2 id="selected-work" className="text-xl font-semibold tracking-tight">
           {dict.home.workHeading}
         </h2>
-        <TodoNote>{dict.home.workNote}</TodoNote>
-        <ul className="flex flex-col">
+        <ul className="flex flex-col gap-4">
           {projects.map((project) => (
             <li key={project.slug}>
-              <Link
-                href={`${localePath(locale, "/projects")}#${project.slug}`}
-                className="inline-flex min-h-11 items-center rounded-sm underline decoration-border underline-offset-4 hover:decoration-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-              >
-                {project.name}
-              </Link>
+              <ProjectCard
+                id={project.slug}
+                name={project.name}
+                copy={dict.projects.items[project.slug]}
+                labels={dict.projects.labels}
+                newTabLabel={dict.newTab}
+              />
             </li>
           ))}
         </ul>

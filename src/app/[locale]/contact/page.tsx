@@ -1,5 +1,4 @@
 import { ExternalLink } from "@/components/external-link";
-import { TodoNote } from "@/components/todo-note";
 import {
   Card,
   CardDescription,
@@ -97,7 +96,6 @@ export default async function ContactPage({
           </li>
         ))}
       </ul>
-      <TodoNote>{dict.contact.todo}</TodoNote>
     </div>
   );
 }
