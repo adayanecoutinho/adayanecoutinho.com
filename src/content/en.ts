@@ -66,9 +66,9 @@ export const en = {
         problem:
           "My AI assistants don't share a trusted memory, and their answers don't show where they came from.",
         solution:
-          "A personal memory service exposed over MCP, starting with health records. Every answer cites its source, and anything an AI extracts stays pending until I confirm it. The public demo uses fictional data only.",
+          "A personal memory service exposed over MCP. Health records come first; other domains, like training methodology, live side by side, and each client only sees the domains it was granted. Every answer cites its source, and anything an AI extracts stays pending until I confirm it. The public demo uses fictional data only.",
         result:
-          "Phase 1 of 4. The read-only MCP server is public on GitHub, with 25 tests, CI with secret scanning and 10 architecture decision records.",
+          "Phase 1 of 4, public on GitHub. A retrieval evaluation runs on every push: 17/17 gating cases, 0 scope violations, MRR 0.962. 44 tests and 13 architecture decision records.",
         stack: ["Python", "MCP", "SQLite FTS5", "Git"],
         links: [
           {
