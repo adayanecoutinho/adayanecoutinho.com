@@ -65,9 +65,9 @@ export const pt = {
         problem:
           "Meus assistentes de IA não compartilham uma memória confiável, e as respostas não mostram de onde vieram.",
         solution:
-          "Um serviço de memória pessoal exposto por MCP, começando pelo histórico de saúde. Cada resposta cita a fonte, e o que uma IA extrai fica pendente até eu confirmar. A demonstração pública usa só dados fictícios.",
+          "Um serviço de memória pessoal exposto por MCP. O histórico de saúde vem primeiro; outros domínios, como a metodologia de treino, ficam lado a lado, e cada cliente só vê os domínios que recebeu. Cada resposta cita a fonte, e o que uma IA extrai fica pendente até eu confirmar. A demonstração pública usa só dados fictícios.",
         result:
-          "Fase 1 de 4. O servidor MCP só de leitura está público no GitHub, com 25 testes, CI com varredura de segredos e 10 registros de decisão de arquitetura (ADRs).",
+          "Fase 1 de 4, público no GitHub. Uma avaliação de recuperação roda a cada push: 17/17 casos obrigatórios, 0 vazamentos de escopo, MRR 0,962. 44 testes e 13 registros de decisão de arquitetura.",
         stack: ["Python", "MCP", "SQLite FTS5", "Git"],
         links: [
           {
