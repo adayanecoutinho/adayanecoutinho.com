@@ -10,7 +10,7 @@ export const siteConfig = {
 export const projects = [
   { slug: "personal-brain-mcp", name: "Personal Brain MCP" },
   { slug: "openmonetis", name: "OpenMonetis Open Finance" },
-  { slug: "treino-evolucao", name: "Treino Evolução" },
+  { slug: "treino-evolucao", name: "training-tracker" },
 ] as const;
 
 export type ProjectSlug = (typeof projects)[number]["slug"];
