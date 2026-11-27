@@ -68,7 +68,7 @@ export const en = {
         solution:
           "A personal memory service exposed over MCP. Health records come first; other domains, like training methodology, live side by side, and each client only sees the domains it was granted. Every answer cites its source, and anything an AI extracts stays pending until I confirm it. The public demo uses fictional data only.",
         result:
-          "Phase 1 of 4, public on GitHub. A retrieval evaluation runs on every push: 17/17 gating cases, 0 scope violations, MRR 0.962. 44 tests and 13 architecture decision records.",
+          "Phase 1 of 4 complete: real records running on my server with off-site backups. Retrieval evaluation on every push: 23/23 gating cases on the public set, 17/17 on the private set with real data, 0 scope violations. 58 tests and 14 architecture decision records.",
         stack: ["Python", "MCP", "SQLite FTS5", "Git"],
         links: [
           {
@@ -102,6 +102,12 @@ export const en = {
         result:
           "152 workouts, 3,031 sets and 101 cardio sessions migrated with matching counts, running on my server with health-check alerts.",
         stack: ["Python", "PostgreSQL", "Docker", "Claude"],
+        links: [
+          {
+            label: "GitHub",
+            href: "https://github.com/adayanecoutinho/training-tracker",
+          },
+        ],
       },
     },
   },

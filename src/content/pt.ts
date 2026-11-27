@@ -67,7 +67,7 @@ export const pt = {
         solution:
           "Um serviço de memória pessoal exposto por MCP. O histórico de saúde vem primeiro; outros domínios, como a metodologia de treino, ficam lado a lado, e cada cliente só vê os domínios que recebeu. Cada resposta cita a fonte, e o que uma IA extrai fica pendente até eu confirmar. A demonstração pública usa só dados fictícios.",
         result:
-          "Fase 1 de 4, público no GitHub. Uma avaliação de recuperação roda a cada push: 17/17 casos obrigatórios, 0 vazamentos de escopo, MRR 0,962. 44 testes e 13 registros de decisão de arquitetura.",
+          "Fase 1 de 4 concluída: registros reais rodando no meu servidor com backup externo. Avaliação de recuperação a cada push: 23/23 casos obrigatórios no conjunto público, 17/17 no conjunto privado com dados reais, 0 vazamentos de escopo. 58 testes e 14 registros de decisão de arquitetura.",
         stack: ["Python", "MCP", "SQLite FTS5", "Git"],
         links: [
           {
@@ -101,6 +101,12 @@ export const pt = {
         result:
           "152 treinos, 3.031 séries e 101 sessões de cardio migrados com contagens iguais, rodando no meu servidor com alertas de monitoramento.",
         stack: ["Python", "PostgreSQL", "Docker", "Claude"],
+        links: [
+          {
+            label: "GitHub",
+            href: "https://github.com/adayanecoutinho/training-tracker",
+          },
+        ],
       },
     },
   },
